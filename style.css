@@ -1,0 +1,172 @@
+body{
+   margin: 0;
+   background: radial-gradient(circle at top left, rgba(255,255,255,0.4), transparent 70%),linear-gradient(135deg, #f5e6d3, #e8d3b5);
+   background-attachment: fixed;  
+}
+
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:30px;
+}
+
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+h3{
+font-size: 25px;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin-top: 55px; /* flyttar ner rubrik och text */
+}
+
+.h3{
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size:65px;
+
+}
+
+@media (max-width: 768px) {
+  .h3 {
+    font-size: 3.0rem;   /* tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .h2 {
+    font-size: 2.8rem;   /* mobil */
+  }
+}
+
+/*HEADER STYLING*/
+
+.site-header{
+    background: linear-gradient(135deg, #4E2A1E, #6B3B2A, #8C4F36);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:20px 16px;
+    border-bottom: 2px solid rgb(53, 21, 21);
+    display:flex;
+    justify-content: space-between; 
+    align-items: center;    
+    gap:16px;   
+    
+}
+
+.logo{
+    width:30px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align:bottom;
+}
+
+.brand {
+  text-decoration: none;    
+  color: #f9f3f3;               
+  font-weight: bold;         
+  font-size: 1.2rem;         
+}
+
+.menu-toggle {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+ 
+}
+
+.primary-nav{
+    display:none; /*hide the nav list on smal displays. Just the button exist*/
+}
+
+.primary-nav ul{
+    list-style: none; /*no dots*/
+    Margin:0;
+    padding:0;   
+}
+
+.primary-nav a{
+    color:#f8f1e7; /*text color on link */
+    text-decoration: none; 
+    padding: 7px; 
+    border-radius: 4px;
+}
+
+@media (min-width:1024px){
+    .menu-toggle {
+     display:none;
+    }
+    .primary-nav{
+        display:block;
+    }
+    .primary-nav ul{
+        display:flex; 
+        gap:50px;
+        align-items: center; /*Center the links vertical*/
+        justify-content: flex-end;
+    }
+}
+
+.hero {
+  background: radial-gradient(circle at top left, #F9F6F0, #F5EFE6 40%, #E9DFC8 100%);      /* lite ljusare brun än headern (kan du ändra) */
+  color: rgb(124, 39, 39);              /* vit text */
+  text-align: center;       /* centrera texten */
+  padding: 5px;       /* gör den högre (”banner-känsla”) */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 0px;
+  border-radius: 5px;
+
+}
+
+
+   .grid-info { /*parent*/
+      display: grid;
+      grid-template-columns: 1fr; 
+      gap: 10px;
+      padding-top:5px;
+    }
+
+    @media (min-width: 667px){
+  .grid-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (min-width: 667px) {
+  .box { min-height: 480px; }   /* tablet */
+}
+      .box { /*child*/
+      background: pink;
+      padding: 20px;
+      text-align: center;
+      min-height:300px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+       border-radius: 5px;
+    }
+
+
+@media (min-width: 1024px) {
+  .box { min-height: 480px; }  
+   .grid-info {
+    grid-template-columns: repeat(4, 1fr);
+  } /* desktop */
+}
+  
+.box-image {
+  background-image: url("CoffeeBreak.png");
+  background-size:cover;      /* fyll hela boxen */
+  background-position: center; /* centrera motivet */
+  background-repeat: no-repeat;
+}
+
+.box-image2 {
+  background-image: url("CoffeeBeans.jpg");
+  background-size:cover;      /* fyll hela boxen */
+  background-position: center; /* centrera motivet */
+  background-repeat: no-repeat;
+}
+
+
+a:hover{
+    color:black;
+}
