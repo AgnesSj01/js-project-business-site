@@ -1,57 +1,59 @@
-body{
-   margin: 0;
-   background: radial-gradient(circle at top left, rgba(255,255,255,0.4), transparent 70%),linear-gradient(135deg, #f5e6d3, #e8d3b5);
-   background-attachment: fixed;  
+html, body {
+  height: 100%; /*Let body fill the full viewport height*/
+  margin: 0;  /* ermove browser default margin*/
+  display: flex; /*makin tje body to be at flex container*/
+  flex-direction: column; /*stack children vertically: header, main and footer*/
 }
 
+/*BACKGROUND*/
+body{
+   background: radial-gradient(circle at top left, rgba(255,255,255,0.4), transparent 70%),linear-gradient(135deg, #f5e6d3, #e8d3b5);
+   background-attachment: fixed;  /*keeps background in place while scrolling*/
+}
+
+/*TITLE*/
 h1{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size:30px;
 }
 
-p{
-    font-size: 20px;
-    text-align: justify;
-}
-
+/*making h3 responsive. Setting scale between min-max value depending on screen size*/
 h3{
-font-size: 25px;
+font-size: clamp(2.5rem, 7vw, 4rem);  
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-margin-top: 55px; /* flyttar ner rubrik och text */
+margin-top: 12px;
+padding: 20px;
 }
 
-.h3{
-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-size:65px;
-
+/*making h4 responsive. Setting scale between min-max value depending on screen size*/
+h4{ 
+  font-size: clamp(1.5rem, 4vw, 2rem); 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 8px 0 10px;
+  padding:20px;
 }
 
-@media (max-width: 768px) {
-  .h3 {
-    font-size: 3.0rem;   /* tablet */
-  }
-}
+/*making paragraph responsive. Setting scale between min-max value depending on screen size*/
 
-@media (max-width: 480px) {
-  .h2 {
-    font-size: 2.8rem;   /* mobil */
-  }
+p{
+  font-size: clamp(1rem, 2.5vw, 1.2rem); 
+  text-align: justify;
 }
 
 /*HEADER STYLING*/
-
 .site-header{
     background: linear-gradient(135deg, #4E2A1E, #6B3B2A, #8C4F36);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding:20px 16px;
     border-bottom: 2px solid rgb(53, 21, 21);
-    display:flex;
-    justify-content: space-between; 
-    align-items: center;    
+    display:flex;                   /*Flexbox, placeing brand and nav on same row*/
+    justify-content: space-between; /*spread brand to left, menu/nav to right*/
+    align-items: center;            
     gap:16px;   
     
 }
 
+/*LOGO IMAGE*/
 .logo{
     width:30px;
     height: auto;
@@ -59,6 +61,14 @@ font-size:65px;
     vertical-align:bottom;
 }
 
+/*HIDE THE BRAND TEXT ON SMALLER SCREENS*/
+@media (max-width: 768px) {
+  .logo-text {
+    display: none; /* gömmer texten på mobil */
+  }
+}
+
+/*BRAND LINK TEXT*/
 .brand {
   text-decoration: none;    
   color: #f9f3f3;               
@@ -66,13 +76,25 @@ font-size:65px;
   font-size: 1.2rem;         
 }
 
+/*TEMPORARY HAMURGER MENU*/
 .menu-toggle {
-  background: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  border-radius: 6px;
- 
+  background: none;
+  border: none;
+  cursor:pointer;
+  display: flex; 
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
 }
+
+.menu-toggle span{
+  display:block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
 
 .primary-nav{
     display:none; /*hide the nav list on smal displays. Just the button exist*/
@@ -80,17 +102,18 @@ font-size:65px;
 
 .primary-nav ul{
     list-style: none; /*no dots*/
-    Margin:0;
-    padding:0;   
+    margin: 0;
+    padding: 0;   
 }
 
 .primary-nav a{
-    color:#f8f1e7; /*text color on link */
+    color:#f8f1e7; 
     text-decoration: none; 
     padding: 7px; 
     border-radius: 4px;
 }
 
+/*oN DESKTOP: Show nav links in a row, no hamburger menu*/
 @media (min-width:1024px){
     .menu-toggle {
      display:none;
@@ -106,67 +129,116 @@ font-size:65px;
     }
 }
 
+/*Makes main grow to push footer down*/
+main{
+  flex:1;
+}
+
+/*Hero sector banner*/
 .hero {
   background: radial-gradient(circle at top left, #F9F6F0, #F5EFE6 40%, #E9DFC8 100%);      /* lite ljusare brun än headern (kan du ändra) */
   color: rgb(124, 39, 39);              /* vit text */
   text-align: center;       /* centrera texten */
   padding: 5px;       /* gör den högre (”banner-känsla”) */
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   border-radius: 5px;
 
 }
 
+/*FOOTER STYLING*/
+footer{
+  background: radial-gradient(circle at top left, #F9F6F0, #F5EFE6 40%, #E9DFC8 100%);      /* lite ljusare brun än headern (kan du ändra) */
+  color: rgb(124, 39, 39);              /* vit text */
+  text-align: center;       /* centrera texten */
+  padding: 25px;       /* gör den högre (”banner-känsla”) */
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 20px;
 
-   .grid-info { /*parent*/
-      display: grid;
-      grid-template-columns: 1fr; 
+}
+
+/*GRID: PRODUCT/NEWS CARDS*/
+   .grid-info {                   /*parent crid container*/
+      display: grid;              /*CSS grid handles rows/columns*/
+      grid-template-columns: 1fr; /*Mobile first: 1 column on smal screens*/
       gap: 10px;
       padding-top:5px;
+      padding-left:10px;
+      padding-right:10px;
     }
 
+ /*ON TABLET: 2 COLUMNS*/
     @media (min-width: 667px){
   .grid-info {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
+/*MINIMUM CARD HEIGHT ON TABLET*/
 @media (min-width: 667px) {
-  .box { min-height: 480px; }   /* tablet */
+  .box { min-height: 250px; }  
 }
-      .box { /*child*/
+
+/*CHILD CARDS*/
+.box { 
       background: pink;
       padding: 20px;
       text-align: center;
-      min-height:300px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-       border-radius: 5px;
+      border-radius: 5px;
     }
 
-
+/* On desktop: 4 columns (assignment requirement) + slightly taller cards */
 @media (min-width: 1024px) {
-  .box { min-height: 480px; }  
+  .box { min-height: 300px; }  
    .grid-info {
     grid-template-columns: repeat(4, 1fr);
-  } /* desktop */
+  } 
 }
-  
+
+/* Background image card (box 2) */
 .box-image {
   background-image: url("CoffeeBreak.png");
-  background-size:cover;      /* fyll hela boxen */
-  background-position: center; /* centrera motivet */
+  background-size:cover;      
+  background-position: center; 
   background-repeat: no-repeat;
+  padding: 0; 
+  min-height: 250px; 
 }
 
+/* Background image card (box 4) */
 .box-image2 {
   background-image: url("CoffeeBeans.jpg");
-  background-size:cover;      /* fyll hela boxen */
-  background-position: center; /* centrera motivet */
+  background-size:cover;      
+  background-position: center; 
   background-repeat: no-repeat;
+  padding: 0; 
+  min-height: 250px; 
 }
 
-
-a:hover{
+/* Hover effect for top menu links */
+.primary-nav a:hover{
     color:black;
+}
+
+/* Button styling in box 3*/
+.button {
+  width: 50%;
+  padding: 12px 20px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #f6a2a2, #fcbaba); /* rosa gradient */
+  color: black;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+/* Hover: darker gradient + white text */
+button:hover {
+  background: linear-gradient(145deg, rgb(160, 30, 30), rgb(100, 0, 0)); /*när pilen är över knappen så blir färgen brunn*/
+  color: #fff; 
 }
