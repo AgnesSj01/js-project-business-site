@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="forms.css">
+
+  </head>
 <body>
 
     <header class="site-header"> 
@@ -56,15 +58,109 @@
 
        
     <article class="box">
-     <h2>Panncakes</h2> 
+     <h2>Do you want to pre-order your coffee instead of standing in line?</h2> 
+         <button class="button" onclick="openForm()"> Order here</button>
     </article>
     </div>
     </section>
     </main>
- 
+
     <footer> @Legacy Coffee </footer>
-   
+
+ 
+    <!--====================MODAL/FORMS========================-->
+  
+    <div class="form-popup" id="myForm">
+  
+
+
+    <!--======================form===========================-->
+
+
+    <form action="/action_page.php">
+      <h2>BESTÄLLNING</h2> 
+
+         <fieldset>
+           <label for="name">Name</label> <br>
+             <input type="text" id= "name" name="name" Placeholder=" . . ."> <br>
+    
+              <label for="phone-number">Phone number</label>  <br>
+              <input type="text" id="phonenumber" name="Phone number"  Placeholder=" . . .">  <br>
+
+              <label for="email">Email</label>  <br>
+              <input type="text" id="email" name="email"   Placeholder=" . . ."> <br>
+ 
+              <label>Choice of coffee</label> 
+               <select class="choice" name="choice">
+                <option value="Cappuccino">Cappuccino</option>
+                <option value="Espresso">Espresso</option>
+                <option value="Latte">Latte</option>
+                <option value="Macchiato">Macchiato</option>
+                <option value="Flat White">Flat White</option> 
+                <option value="Mocha">Mocha</option>
+                <option value="Cortado">Cortado</option>
+                <option value="Iced Coffee">Iced Coffee</option>
+                <option value="Americano">Americano</option>
+              </select>  
+
+ <div class="size-column">
+            <label> Size</label>
+            <div class=" size-row">
+<label class= "radiobutton">
+  <span>Small</span>
+      <input type="radio" name="answer" checked>
+      <span class=style-radiobutton></span>
+    </label>
+    <label class= "radiobutton">
+      <span>Medium</span>
+      <input type="radio" name="answer" checked>
+      <span class=style-radiobutton></span>
+    </label>
+    <label class= "radiobutton">
+      <span>Large</span>
+      <input type="radio" name="answer" checked>
+      <span class=style-radiobutton></span>
+    </label>
+        </div>
+        </label>
+
+        <div>
+        <label for="messages">Requests and/or allergies</label>
+        <textarea name="messages" id="messages" placeholder=" . . ."></textarea>
+        </div>
+
+          
+
+         <div class="center-button">
+  <button class="button" type="submit">Send</button>
+        </div>
+
+
+       <button type="button" class="back-formbutton" onclick="closeForm()">Back</button>
+
+</fieldset>
+
+  
+</form>
+
+
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    document.body.style.overflow ="hidden"; //No scroll in the background
+  }
+
+  function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+  document.body.style.overflow="auto"; //Scroll again
+}
+  
+
+
+</script>
 
 
 </body>
+
+
 </html>

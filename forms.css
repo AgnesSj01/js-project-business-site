@@ -1,0 +1,170 @@
+
+
+* {
+  box-sizing: border-box;
+}
+form {
+  border: 4px solid rgb(73, 71, 71);
+  border-radius: 10px;
+  padding:8px;
+  max-width:250px;
+  margin: 40px auto 0;
+  text-align: center; /*centreraar textinnehåll*/
+  background: white;
+}
+
+input{
+  font-size: 15px;
+  padding: 5px 0px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid rgb(73, 71, 71);
+  padding-left: 10px;
+  background-color:  #dfdcdc;
+}
+
+.center-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%; 
+  margin-top:20px;
+}
+
+fieldset{
+  text-align: center;
+  border-radius:10px;
+  padding: 10px;
+  color:rgb(7, 7, 7);
+  font-size:18px;  
+  border: 2px solid rgb(73, 71, 71);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  
+}
+
+select{
+  width:100%; 
+  padding:8px;
+  border-radius: 10px;
+}
+
+.size-column{
+  display:block;
+  margin-top: 15px;
+}
+
+.size-row{
+  display:flex;
+  justify-content: center;
+}
+
+.choice{
+  background-color:  #dfdcdc;
+  border: 2px solid rgb(73, 71, 71);
+}
+
+.radiobutton{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding:8px;
+  margin-bottom: 10px;
+  }
+
+.radiobutton span{
+  display: block;
+  font-size: 16px;
+}
+
+.radiobutton input[type="radio"] {
+  display: none;
+}
+
+.style-radiobutton {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+border: 2px solid rgb(73, 71, 71);
+  cursor: pointer;
+  background-color:  #dfdcdc;
+}
+
+.radiobutton:hover input ~ .style-radiobutton {
+  background-color: rgb(68, 70, 68);
+}
+
+.radiobutton input:checked ~ .style-radiobutton{
+  background:rgb(17, 17, 139);
+}
+
+textarea{
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+border: 2px solid rgb(73, 71, 71
+);  font-size: 15px;
+  padding: 10px;
+  background-color:  #dfdcdc;
+}
+
+/*================MEDIA QUERIES=======================*/
+/*DESKTOP*/
+@media (min-width: 1024px) {
+.radiobutton input{
+cursor:pointer;
+}
+form{
+    width: 600px;          /* gör formuläret mycket bredare */
+    max-width: 100%;        /* säkerställer att det inte blir större än skärmen */
+    margin: 20px auto 0;    /* flyttar form närmare toppen */
+    padding: 20px; 
+    
+  }
+
+  fieldset{
+      font-size: 25px;
+      padding:10px;
+  }
+  .style-radiobutton {
+  width: 25px;
+  height: 25px;
+}
+
+.radiobutton span{
+  font-size: 20px;
+}
+textarea {
+  width: 80%;
+  height: 100px;
+}
+input{
+  width: 80%;
+  height: 40px;
+}
+.choice{
+  width: 80%;
+  height: 40px;
+}
+.button{
+  width: 80%;
+}
+}
+
+
+
+
+.form-popup {
+  display: none;           /* börjar dold */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow:auto;
+  background: rgba(5, 8, 8, 0.2); /* lite genomskinlig vit bakgrund */
+  backdrop-filter: blur(10px);          /* suddar det som ligger bakom */
+  -webkit-backdrop-filter: blur(8px);  /* för bättre stöd i Safari */
+  padding: 15px 0;
+}
