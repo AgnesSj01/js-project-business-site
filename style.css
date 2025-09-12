@@ -1,269 +1,382 @@
-html, body {
-  height: 100%; /*Let body fill the full viewport height*/
-  margin: 0;  /* ermove browser default margin*/
-  display: flex; /*makin tje body to be at flex container*/
-  flex-direction: column; /*stack children vertically: header, main and footer*/
+html,
+body {
+  /*Let body fill the full viewport height*/
+  height: 100%;
+  /* remove browser default margin*/
+  margin: 0;
+  /*making the body to be at flex container*/
+  display: flex;
+  /*stack children vertically: header, main and footer*/
+  flex-direction: column;
 }
 
 /*BACKGROUND*/
-body{
-  background:none;
-   margin: 0;
+body {
+  background: rgb(251, 247, 247);
+  margin: 0;
   padding: 0;
 }
-
-body::before{
-  content:""; /*creating a empty psuedo-element*/
-  position:fixed;
-  inset: 0;
-  background-image: url("Coffeebeans.jpg"); /* byt ut till din bild */
-  background-size: cover;       /* gör så bilden täcker hela sidan */
-  background-position: center;  /* centrerar bilden */
-  background-repeat: no-repeat; /* hindrar att bilden upprepas */
-  z-index: -1;
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 25px;
+  -webkit-text-stroke: 0.5px black;
+  font-weight: bold;
+  /* halvtransparent black background */
+  background: rgba(0, 0, 0, 0.4);
+  /* backgrund behind the text */
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  margin-top: 10px;
 }
 
-/*TITLE*/
-h1{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:30px;
-    -webkit-text-stroke: 0.5px black;
-    font-weight: bold;
-    background: rgba(0,0,0,0.4); /* halvtransparent svart bakgrund */
-    display: inline-block;       /* så bakgrunden bara ligger bakom texten */
-    padding: 4px 8px;
-    border-radius: 6px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
-    margin-top:10px;
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  text-align: center;
+  padding: 0;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0px;
 }
 
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  margin-top: 12px;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
 
-h2{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:23px;
-    font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 6px;
-   -webkit-text-stroke: 0.3px black;
-   text-shadow: 1px  1px 2px rgba(0,0,0,0.9);    margin-top:12px;
-   color: white;
+h4 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  margin-top: 12px;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
 
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 /*HEADER STYLING*/
-.site-header{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding:16px;
-    display:flex;                   /*Flexbox, placeing brand and nav on same row*/
-    justify-content: space-between; /*spread brand to left, menu/nav to right*/
-    align-items: center;   
-    background: rgba(0,0,0,0.4); /* halvtransparent svart bakgrund */
-}
-
-/*Hero sector banner*/
-.hero {
-  color: rgb(250, 249, 249);              /* vit text */
-  text-align: center;       /* centrera texten */
-  padding: 5px;       /* gör den högre (”banner-känsla”) */
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-
-/*LOGO IMAGE*/
-.logo{
-    width:30px;
-    height: auto;
-    margin-right: 8px;
-    vertical-align:bottom;
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 20px;
+  align-items: center;
+  background: black;
+  position: relative;
+  z-index: 10;
 }
 
 /*BRAND LINK TEXT*/
 .brand {
-  text-decoration: none;    
-  color: #f9f3f3;               
-  font-weight: bold;         
-  font-size: 1rem;         
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  color: #f9f3f3;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/*LOGO IMAGE*/
+.logo {
+  width: 30px;
+  height: auto;
+  margin-right: 8px;
+  display: block;
 }
 
 /*TEMPORARY HAMURGER MENU*/
 .menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
-  cursor:pointer;
-  display: flex; 
-  flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   padding: 8px;
+  border: none;
+  cursor: pointer;
 }
 
-.menu-toggle span{
-  display:block;
-  width: 25px;
-  height: 3px;
-  background-color: white;
+.menu-toggle span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  background-color: rgb(253, 250, 250);
   border-radius: 2px;
 }
 
-.primary-nav{display:none;} /*hide the nav list on smal displays. Just the button exist*/
-.primary-nav ul{
-    list-style: none; /*no dots*/
-    margin: 0;
-    padding: 0;   
+.primary-nav {
+  display: none;
 }
-.primary-nav a{
-    color:#f8f1e7; 
-    text-decoration: none; 
-    padding: 7px; 
-    border-radius: 4px;
+
+/*hide the nav list on smal displays. Just the button exist*/
+.primary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-nav a {
+  color: #f8f1e7;
+  text-decoration: none;
+  padding: 7px;
+  border-radius: 4px;
+}
+
+/*Hero sector banner*/
+.hero {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: rgb(250, 249, 249);
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /*FOOTER STYLING*/
-footer{
-  color: rgb(255, 255, 255);              /* vit text */
-  text-align: center;       /* centrera texten */
-  font-size: 20px;
-  padding: 20px;       /* gör den högre (”banner-känsla”) */
-  border-radius: 12px;
+footer {
+  color: rgb(255, 255, 255);
+  padding: 10px;
   margin-top: 20px;
-  background: rgba(0,0,0,0.4); /* halvtransparent svart bakgrund */
-  display: inline-block;       /* så bakgrunden bara ligger bakom texten */
+  background-color: black;
+}
+
+footer p {
+  text-align: center;
+  font-size: 13px;
+  padding: 0px;
+  font-style: normal;
+  margin: 10px;
 }
 
 /*GRID: PRODUCT/NEWS CARDS*/
-  .grid-info {                   /*parent crid container*/
-    display: grid;              /*CSS grid handles rows/columns*/
-    grid-template-columns: 1fr; /*Mobile first: 1 column on smal screens*/
-    gap: 1px;
-    padding:10px;
-    justify-items: center;   /* centrera barn horisontellt */
-    align-items:start; /*Boxarna fyller samma höjd*/
-    max-width: 100%;       /* hindra att grid fyller hela skärmen */
-    grid-auto-rows: 1fr;
-    box-sizing: border-box;
+/*parent crid container*/
+.grid-info {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  padding: 2px;
+  box-sizing: border-box;
+  gap: 10px;
+}
 
-    }
+/*CHILD CARDS*/
+.box {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px); /*better on Safari*/
+  border-radius: 2px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 8px 30px rgba(0, 0, 0, 0.15);
+  color: white;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px 10px;
+  min-height: 180px;
+  box-sizing: border-box;
+}
 
-    /*CHILD CARDS*/
-  .box { 
-    background: rgba(0,0,0,0.4); /* halvtransparent svart bakgrund */
-    backdrop-filter: blur(5px);          /* suddar det som ligger bakom */
-    -webkit-backdrop-filter: blur(10px);  /* för bättre stöd i Safari */
-    border: 1px solid rgb(40, 38, 38);
-    border-radius: 10px;                  /* rundade hörn */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* skugga */
-    text-align: center;
-    color: white;
-    width: 90%;
-    max-width: 320px;  /* justera efter smak (t.ex. 200–280px) */
-    margin: 5px auto;    /* säkerhetsbälte för centrering */
-    display:flex;
-    flex-direction:column; /*rubrik, text och button i kolumn*/
-    justify-content: center; /*centrerar lodrätt*/
-    align-items: center; /*centrerar vågrätt*/
-    text-align: center; /*centreraar textinnehåll*/
-    padding: 0 20px;           /* bara sidopadding, inget top/bottom */
-    min-height: 140px; 
-    box-sizing: border-box;
-  }
+.box1 {
+  background-image: url("images/coffeeheart.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
+.box2 {
+  background-image: url("images/coffeemaking.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
+.box3 {
+  background-image: url("images/menu.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
+.box4 {
+  background-image: url("images/coffeetakeaway.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #3b2e2a;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
 
 /*================MEDIA QUERIES===============*/
- 
-/*TABLET*/
- /*ON TABLET: 2 COLUMNS*/
- @media (min-width: 667px){
-.grid-info {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-}
-  .box { 
-    min-height: 250px; 
-    max-width: 300px;
-    margin: 10px auto;    
-  }  
-}
 
+/*TABLET*/
+/*ON TABLET: 2 COLUMNS*/
+@media (min-width: 667px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .grid-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .box {
+    min-height: 330px;
+    width: 100%;
+    padding: 8px;
+    margin: 0px;
+  }
+
+  .button {
+    width: 80%; /* sluta ta 100% bredd */
+    padding: 6px 14px; /* lite smalare/högre */
+    font-size: 13px; /* något mindre text */
+    align-self: center; /* håll den centrerad i boxens flex */
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 13px;
+  }
+}
 
 /*DESKTOP*/
 /* On desktop: 4 columns (assignment requirement) + slightly taller cards */
 @media (min-width: 1024px) {
+  .hero {
+    height: 60vh;
+  }
 
-  main{
-    flex:1;
+  main {
+    flex: 1;
   }
 
   .grid-info {
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
-  } 
-
-  .box { min-height: 300px; }  
-   .box { 
-    min-height: 280px; 
-    max-width: 280px;
   }
+
+  .box {
+    min-height: 360px;
+    max-width: 360px;
+    margin-bottom: 30px;
+  }
+
+  .button {
+    width: 80%; /* sluta ta 100% bredd */
+    padding: 6px 14px; /* lite smalare/högre */
+    font-size: 13px; /* något mindre text */
+    align-self: center; /* håll den centrerad i boxens flex */
+  }
+
   .box:hover {
-    transform: scale(1.05); /* växer med 5 % */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* lite starkare skugga */
+    transform: scale(1.05);
+    /* växer med 5 % */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    /* lite starkare skugga */
   }
 
-  .menu-toggle {display:none;} /*oN DESKTOP: Show nav links in a row, no hamburger menu*/
-  .primary-nav{display:block;}
-  .primary-nav ul{
-      display:flex; 
-      gap:50px;
-      align-items: center; /*Center the links vertical*/
-      justify-content: flex-end;
-  }
-   h1{ font-size: 50px; -webkit-text-stroke: 2px black; }
-/* Hover: darker gradient + white text */
-button:hover {
-  background: linear-gradient(145deg, rgb(30, 160, 52), rgb(13, 23, 11)); /*när pilen är över knappen så blir färgen brunn*/
-  color: #fff; 
-}
+  .menu-toggle {
+    display: none;
   }
 
+  /*ON DESKTOP: Show nav links in a row, no hamburger menu*/
+  .primary-nav {
+    display: block;
+  }
 
-/*HIDE THE BRAND TEXT ON SMALLER SCREENS*/
-@media (max-width: 768px) {
-  .logo-text {display: inline;} /* showing brand-text from tablet to desktop*/
+  .primary-nav ul {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  button:hover {
+    background: linear-gradient(145deg, rgb(244, 246, 245), rgb(13, 23, 11));
+    color: #fff;
+  }
+
+  /* Hover effect for top menu links */
+  .primary-nav a:hover {
+    color: black;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 15px;
+  }
 }
-
-
-/* Hover effect for top menu links */
-.primary-nav a:hover{
-    color:black;
-}
-
-/*===================Button style======================*/
-
-/* Button styling in box 3*/
-.button {
-  width: 100%;
-  padding: 12px 20px;
-  background: linear-gradient(145deg, rgb(79, 73, 73), rgb(100, 0, 0)); /*när pilen är över knappen så blir färgen brunn*/
-  color: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  border-radius: 10px;
-  border: 2px solid rgb(97, 2, 2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-.back-formbutton{
-  width: 100%;
-  padding: 12px 20px;
-  background: linear-gradient(145deg, rgb(43, 40, 40), rgb(100, 0, 0)); /*när pilen är över knappen så blir färgen brunn*/
-  color: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  border-radius: 10px;
-  border: 2px solid rgb(97, 2, 2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-

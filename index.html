@@ -1,166 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="forms.css">
-
+    <link rel="stylesheet" href="forms.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-<body>
 
-    <header class="site-header"> 
-    <a class="brand" href="#">
-  <img src="expresso.png" alt="Coffee logo" class="logo"> <span class= "logo-text">Legacy Coffee</span></a>  
-   
-  
-  <button class="menu-toggle" aria-label="Open menu"> 
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#">
+        <img src="images/expresso.png" alt="Coffee logo" class="logo" />
+        <span class="logo-text">Legacy Coffee</span></a
+      >
 
-     <nav class="primary-nav" aria-label="primär navigation">
+      <button class="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" aria-label="primär navigation">
         <ul>
-          <li> <a href="#">OUR STORY</a> </li>
-          <li> <a href="#">OPENING HOURS</a> </li>
-          <li> <a href="#">CONTACT</a> </li>
-          <li> <a href="#">MENU</a> </li>
+          <li><a href="#">OPENING HOURS</a></li>
+          <li><a href="#">CONTACT</a></li>
         </ul>
       </nav>
     </header>
 
-      <main>
-  <!-- Hero-sektion -->
-    <section class="hero" aria-labelledby="hero-title">
-    <h1 id="hero-title">WELCOME TO LEGACY COFFEE</h1>
-    </section>
+    <main>
+      <!-- Hero-sektion -->
+      <section class="hero" aria-labelledby="hero-title">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="videos/coffeemaking.mp4" type="video/mp4" />
+        </video>
 
-  <!--Cards-->
-    <section>
-      <div class="grid-info">
-        <article class="box">
-         <h2>A coffee with heart in every cup</h2> 
-        </article>
+        <h1 id="hero-title">WELCOME TO LEGACY COFFEE</h1>
+      </section>
 
-    
-    <article class="box">
-     <h2>Coffee that makes a difference</h2>
-     <!--<p>Our coffee beans are more than just taste, they tell the story of farmers working in harmony with nature. Grown sustainably and certified for fair conditions, each bean is a promise of care for both people and the planet. Enjoy every cup with a clear conscience. Every sip makes a difference.</p>-->
-     <button class="button" href="#our-story" role="button"> Read more about us </button>
-    </article>
-    
-    
-    <article class="box">
-     <h2>Coffe is importan</h2> 
-    </article>
+      <h2>About us</h2>
+      <p>
+        Our family has run this café for generations, serving exceptional coffee
+        made from beans grown under fair and sustainable conditions.
+      </p>
 
-       
-    <article class="box">
-     <h2>Do you want to pre-order your coffee instead of standing in line?</h2> 
-         <button class="button" onclick="openForm()"> Order here</button>
-    </article>
-    </div>
-    </section>
+      <!--Cards-->
+      <section>
+        <div class="grid-info">
+          <article class="box box1">
+            <h3>A coffee with heart in every cup</h3>
+            <button class="button" href="#our-story" role="button">
+              Read more about us
+            </button>
+          </article>
+
+          <article class="box box2">
+            <h3>Coffee that makes a difference</h3>
+            <button class="button" href="#our-story" role="button">
+              Read more
+            </button>
+          </article>
+
+          <article class="box box3">
+            <h3>Take a look at our coffee menu</h3>
+            <button class="button" href="#our-story" role="button">Menu</button>
+          </article>
+
+          <article class="box box4">
+            <h3>Skip the line, order in advance</h3>
+            <button class="button" onclick="openForm()">Order here</button>
+          </article>
+        </div>
+      </section>
     </main>
 
-    <footer> @Legacy Coffee </footer>
+    <footer>
+      <p>@2025 Legacy Coffee</p>
+      <p>Storgatan 29, Stockholm | 08-123 456 78</p>
+      <p>
+        Follow our instagram:
+        <a href="#">Instagram</a>
+      </p>
+    </footer>
 
- 
     <!--====================MODAL/FORMS========================-->
-  
+
     <div class="form-popup" id="myForm">
-  
+      <!--======================form===========================-->
 
+      <form action="http://httpbin.org/anything" method="POST">
+        <h2>BESTÄLLNING</h2>
 
-    <!--======================form===========================-->
+        <!-- Kontaktuppgifter -->
+        <fieldset>
+          <legend>Contact details</legend>
 
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" required /><br />
 
-    <form action="/action_page.php">
-      <h2>BESTÄLLNING</h2> 
+          <label for="phonenumber">Phone number</label><br />
+          <input
+            type="number"
+            id="phonenumber"
+            name="phonenumber"
+            required
+          /><br />
 
-         <fieldset>
-           <label for="name">Name</label> <br>
-             <input type="text" id= "name" name="name" Placeholder=" . . ."> <br>
-    
-              <label for="phone-number">Phone number</label>  <br>
-              <input type="text" id="phonenumber" name="Phone number"  Placeholder=" . . .">  <br>
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" required /><br />
+        </fieldset>
 
-              <label for="email">Email</label>  <br>
-              <input type="text" id="email" name="email"   Placeholder=" . . ."> <br>
- 
-              <label>Choice of coffee</label> 
-               <select class="choice" name="choice">
-                <option value="Cappuccino">Cappuccino</option>
-                <option value="Espresso">Espresso</option>
-                <option value="Latte">Latte</option>
-                <option value="Macchiato">Macchiato</option>
-                <option value="Flat White">Flat White</option> 
-                <option value="Mocha">Mocha</option>
-                <option value="Cortado">Cortado</option>
-                <option value="Iced Coffee">Iced Coffee</option>
-                <option value="Americano">Americano</option>
-              </select>  
+        <!-- Kaffe -->
+        <fieldset>
+          <legend>Choice of coffee</legend>
+          <select class="choice" name="choice" id="choice">
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Espresso">Espresso</option>
+            <option value="Latte">Latte</option>
+            <option value="Macchiato">Macchiato</option>
+            <option value="Flat White">Flat White</option>
+            <option value="Mocha">Mocha</option>
+            <option value="Cortado">Cortado</option>
+            <option value="Iced Coffee">Iced Coffee</option>
+            <option value="Americano">Americano</option>
+          </select>
+        </fieldset>
 
- <div class="size-column">
-            <label> Size</label>
-            <div class=" size-row">
-<label class= "radiobutton">
-  <span>Small</span>
-      <input type="radio" name="answer" checked>
-      <span class=style-radiobutton></span>
-    </label>
-    <label class= "radiobutton">
-      <span>Medium</span>
-      <input type="radio" name="answer" checked>
-      <span class=style-radiobutton></span>
-    </label>
-    <label class= "radiobutton">
-      <span>Large</span>
-      <input type="radio" name="answer" checked>
-      <span class=style-radiobutton></span>
-    </label>
+        <!-- Storlek -->
+        <fieldset>
+          <legend>Size</legend>
+          <div class="size-row">
+            <label class="radiobutton">
+              <span>Small</span>
+              <input type="radio" name="size" value="Small" checked />
+              <span class="style-radiobutton"></span>
+            </label>
+            <label class="radiobutton">
+              <span>Medium</span>
+              <input type="radio" name="size" value="Medium" />
+              <span class="style-radiobutton"></span>
+            </label>
+            <label class="radiobutton">
+              <span>Large</span>
+              <input type="radio" name="size" value="Large" />
+              <span class="style-radiobutton"></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Önskemål -->
+        <fieldset>
+          <legend>Requests and/or allergies</legend>
+          <textarea name="messages" id="messages"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pickup time</legend>
+          <input type="time" id="pickup-time" name="pickup-time" required />
+        </fieldset>
+
+        <!-- Knappar -->
+        <div class="center-button">
+          <button class="buttonform" type="submit">Send</button>
         </div>
-        </label>
+        <button type="button" class="back-formbutton" onclick="closeForm()">
+          Back
+        </button>
+      </form>
 
-        <div>
-        <label for="messages">Requests and/or allergies</label>
-        <textarea name="messages" id="messages" placeholder=" . . ."></textarea>
-        </div>
+      <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+          document.body.style.overflow = "hidden"; //No scroll in the background
+        }
 
-          
-
-         <div class="center-button">
-  <button class="button" type="submit">Send</button>
-        </div>
-
-
-       <button type="button" class="back-formbutton" onclick="closeForm()">Back</button>
-
-</fieldset>
-
-  
-</form>
-
-
-<script>
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    document.body.style.overflow ="hidden"; //No scroll in the background
-  }
-
-  function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-  document.body.style.overflow="auto"; //Scroll again
-}
-  
-
-
-</script>
-
-
-</body>
-
-
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+          document.body.style.overflow = "auto"; //Scroll again
+        }
+      </script>
+    </div>
+  </body>
 </html>
