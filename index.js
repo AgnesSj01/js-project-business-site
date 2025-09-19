@@ -2,7 +2,7 @@
 
 const toggleButton = document.querySelector(".menu-toggle"); // the hamburger icon
 const nav = document.getElementById("myTopnav"); // the <nav> element
-const content = document.getElementById("content"); // the main content (blurred when menu/modal is open)
+const content = document.getElementById("page"); // the main content (blurred when menu/modal is open)
 
 toggleButton.addEventListener("click", () => {
   // check current state of aria-expanded (true/false)

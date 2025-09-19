@@ -28,6 +28,7 @@
   <body>
     <!--=====================HEADER===========================-->
     <!--named the class for the header to "site-header"-->
+
     <header class="site-header">
       <!--Logo and brand text for the site-->
       <a class="brand" href="index.html">
@@ -56,65 +57,66 @@
     </header>
 
     <!--========================MAIN CONTENT====================================-->
+    <div id="page">
+      <main id="content">
+        <!-- Hero-sektion with a background video-->
+        <section class="hero" aria-labelledby="hero-title">
+          <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/coffeemaking.mp4" type="video/mp4" />
+          </video>
+          <h1 id="hero-title">WELCOME TO LEGACY COFFEE</h1>
+        </section>
 
-    <main id="content">
-      <!-- Hero-sektion with a background video-->
-      <section class="hero" aria-labelledby="hero-title">
-        <video autoplay muted loop playsinline class="hero-video">
-          <source src="videos/coffeemaking.mp4" type="video/mp4" />
-        </video>
-        <h1 id="hero-title">WELCOME TO LEGACY COFFEE</h1>
-      </section>
+        <section class="about">
+          <!--short intro text-->
+          <h2>About us</h2>
+          <p>
+            Our family has run this café for generations, serving exceptional
+            coffee made from beans grown under fair and sustainable conditions.
+          </p>
+        </section>
 
-      <section class="about">
-        <!--short intro text-->
-        <h2>About us</h2>
-        <p>
-          Our family has run this café for generations, serving exceptional
-          coffee made from beans grown under fair and sustainable conditions.
-        </p>
-      </section>
-
-      <!--Grid with four info cards-->
-      <section>
-        <div class="grid-info">
-          <!--==BOX 1==-->
-          <!--Each card has a button that opens a popup. class= box is the overal style for all the boxes. Then each boxes has their one class=boxX-->
-          <article class="box box1">
-            <h3>A coffee with heart in every cup</h3>
-            <!-- Button that opens a popup. 
+        <!--Grid with four info cards-->
+        <section>
+          <div class="grid-info">
+            <!--==BOX 1==-->
+            <!--Each card has a button that opens a popup. class= box is the overal style for all the boxes. Then each boxes has their one class=boxX-->
+            <article class="box box1">
+              <h3>A coffee with heart in every cup</h3>
+              <!-- Button that opens a popup. 
                  - class="open-btn": all buttons with this class get the same JS event listener.
                  - data-target="box1": tells JavaScript which popup to open (matches the popup <div> with id="box1").-->
-            <button class="open-btn" data-target="box1">
-              Read more about us
-            </button>
-          </article>
+              <button class="open-btn" data-target="box1">
+                Read more about us
+              </button>
+            </article>
 
-          <!--==BOX 2==-->
-          <article class="box box2">
-            <h3>Coffee that makes a difference</h3>
-            <!-- Works the same way as Box 1:
+            <!--==BOX 2==-->
+            <article class="box box2">
+              <h3>Coffee that makes a difference</h3>
+              <!-- Works the same way as Box 1:
                  - open-btn: handled by JavaScript. 
                  - data-target="box2": opens the popup with id="box2". -->
-            <button class="open-btn" data-target="box2">Read more</button>
-          </article>
+              <button class="open-btn" data-target="box2">Read more</button>
+            </article>
 
-          <!--==BOX 3==-->
-          <article class="box box3">
-            <h3>Take a look at our coffee menu</h3>
-            <!-- Same logic again:
+            <!--==BOX 3==-->
+            <article class="box box3">
+              <h3>Take a look at our coffee menu</h3>
+              <!-- Same logic again:
                   - open-btn: all these buttons share the same event in JS. 
                   - data-target="box3": opens the popup with id="box3". -->
-            <button class="open-btn" data-target="box3">Menu</button>
-          </article>
+              <button class="open-btn" data-target="box3">Menu</button>
+            </article>
 
-          <!--==BOX 4==-->
-          <article class="box box4">
-            <h3>Skip the line, order in advance</h3>
-            <button class="open-btn" data-target="myForm">Order here</button>
-          </article>
-        </div>
-      </section>
+            <!--==BOX 4==-->
+            <article class="box box4">
+              <h3>Skip the line, order in advance</h3>
+              <button class="open-btn" data-target="myForm">Order here</button>
+            </article>
+          </div>
+        </section>
+      </main>
 
       <!--===Footer with contact details====-->
       <footer>
@@ -134,7 +136,7 @@
           >
         </p>
       </footer>
-    </main>
+    </div>
 
     <!-- ================= POPUPS ================= -->
     <!-- Each popup corresponds to one of the cards above -->
