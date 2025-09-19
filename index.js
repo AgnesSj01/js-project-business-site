@@ -8,13 +8,19 @@ toggleButton.addEventListener("click", () => {
   // check current state of aria-expanded (true/false)
   const expanded =
     toggleButton.getAttribute("aria-expanded") === "true" || false;
-
   // toggle aria-expanded value for accessibility (screen readers know if menu is open)
   toggleButton.setAttribute("aria-expanded", !expanded);
 
   // toggle classes to show/hide nav and blur content
   nav.classList.toggle("active");
-  content.classList.toggle("blur"); // blur the background content
+  content.classList.toggle("blur"); // blur the background content when the nav is open. Refer to blur  class in css
+
+  //swap icon: bars <-> xmark
+  const icon = toggleButton.querySelector("i");
+  if (icon) {
+    icon.classList.toggle("fa-bars", expanded);
+    icon.classList.toggle("fa-xmark", !expanded);
+  }
 });
 
 // =================== MODAL FUNCTIONS ===================

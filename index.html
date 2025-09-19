@@ -30,7 +30,7 @@
     <!--named the class for the header to "site-header"-->
     <header class="site-header">
       <!--Logo and brand text for the site-->
-      <a class="brand" href="#">
+      <a class="brand" href="index.html">
         <img src="images/expresso.png" alt="Coffee logo" class="logo" />
         <span class="logo-text">Legacy Coffee</span></a
       >
@@ -42,15 +42,15 @@
         aria-controls="myTopnav"
         aria-expanded="false"
       >
-        <!-- Font Awesome solid (fylld ikon) + bars (hamburgerikon) -->
+        <!-- Font Awesome solid (fylld ikon) + bars (hamburgerikon). i=icon element -->
         <i class="fa-solid fa-bars"></i>
       </button>
 
       <!--navigation links-->
       <nav class="top-nav" id="myTopnav">
         <ul>
-          <li><a href="openinghours">OPENING HOURS</a></li>
-          <li><a href="contact">CONTACT</a></li>
+          <li><a href="openinghours.html">OPENING HOURS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
         </ul>
       </nav>
     </header>
@@ -66,12 +66,14 @@
         <h1 id="hero-title">WELCOME TO LEGACY COFFEE</h1>
       </section>
 
-      <!--short intro text-->
-      <h2>About us</h2>
-      <p>
-        Our family has run this café for generations, serving exceptional coffee
-        made from beans grown under fair and sustainable conditions.
-      </p>
+      <section class="about">
+        <!--short intro text-->
+        <h2>About us</h2>
+        <p>
+          Our family has run this café for generations, serving exceptional
+          coffee made from beans grown under fair and sustainable conditions.
+        </p>
+      </section>
 
       <!--Grid with four info cards-->
       <section>
@@ -113,17 +115,26 @@
           </article>
         </div>
       </section>
-
-      <!--===Footer with contact details====-->
-      <footer>
-        <p>@2025 Legacy Coffee</p>
-        <p>Storgatan 29, Stockholm | 08-123 456 78</p>
-        <p>
-          Follow our instagram:
-          <a href="#">Instagram</a>
-        </p>
-      </footer>
     </main>
+
+    <!--===Footer with contact details====-->
+    <footer>
+      <p>@2025 Legacy Coffee</p>
+      <p>Storgatan 29 Stockholm</p>
+      <p>
+        Follow our instagram:
+        <!-- This link opens in a new tab.
+            The rel="noopener noreferrer" part improves security
+            by preventing the new page from accessing our site,
+             and also hides the referrer information. -->
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram</a
+        >
+      </p>
+    </footer>
 
     <!-- ================= POPUPS ================= -->
     <!-- Each popup corresponds to one of the cards above -->
@@ -170,11 +181,11 @@
           Fairtrade, KRAV, and Rainforest Alliance – a guarantee of both great
           taste and a responsible choice. The result is high-quality coffee you
           can truly enjoy with a clear conscience.
-          <!-- Same logic as popup 1:
+        </p>
+        <!-- Same logic as popup 1:
       - close-btn: used by JavaScript to attach the close action.
       - data-target="box2": closes <div id="box2"> when clicked.-->
-          <button class="close-btn" data-target="box2">Back</button>
-        </p>
+        <button class="close-btn" data-target="box2">Back</button>
       </article>
     </div>
 
