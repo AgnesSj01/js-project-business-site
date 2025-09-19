@@ -13,7 +13,7 @@ toggleButton.addEventListener("click", () => {
 
   // toggle classes to show/hide nav and blur content
   nav.classList.toggle("active");
-  content.classList.toggle("blur"); // blur the background content
+  content.classList.toggle("blur"); // blur the background content when the nav is open. Refer to blur  class in css
 
   //swap icon: bars <-> xmark
   const icon = toggleButton.querySelector("i");
