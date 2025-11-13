@@ -1,15 +1,22 @@
-# js-project-business-site
-Detta är ett projekt jag byggt under **Technigos Web Development Bootcamp**.  
-Syftet var att skapa en responsiv företagssida med HTML, CSS och JavaScript, där fokus låg på design, användbarhet och struktur.
+This is a project I built during Technigo’s Web Development Bootcamp.
+The goal was to create a responsive business website using HTML, CSS, and JavaScript, with a focus on design, usability, and structure.
 
-## Funktioner
-- Responsiv design för mobil och desktop
-- Navigeringsmeny och flera undersidor
-- Kontaktformulär
-- Hero-sektion med video
-- Styling med CSS och egen forms.css
+Features
 
-## Tekniker
-- HTML
-- CSS
-- JavaScript
+Responsive design for mobile and desktop
+
+Navigation menu and multiple subpages
+
+Contact form
+
+Hero section with video
+
+Styling with CSS and a custom forms.css
+
+Technologies
+
+HTML
+
+CSS
+
+JavaScript
